@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Cycle - AI-Powered Sustainability Platform</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background Decorative Glowing Blurs -->
+  <div class="bg-glow-container">
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a class="nav-brand" id="brand-logo-trigger">
+      <!-- Embedded custom GreenCycle Logo SVG -->
+      <img src="images/logoo.png" alt="GreenCycle Logo" class="logo-svg">
+      <span class="brand-name">GreenCycle</span>
+    </a>
+
+    <nav>
+      <ul class="nav-menu">
+        <li><a class="nav-link active" data-view="home" data-i18n="nav_home">Home</a></li>
+        <li><a class="nav-link" data-view="about-section" data-i18n="nav_features">About Us</a></li>
+        <li><a class="nav-link" data-view="marketplace" data-i18n="nav_marketplace">Marketplace</a></li>
+        <li><a class="nav-link" data-view="ecoai" data-i18n="nav_chatbot">Eco AI Hub</a></li>
+        <li><a class="nav-link" id="nav-dash-link" data-view="dashboard" data-i18n="nav_dashboard"
+            style="display:none;">Dashboard</a></li>
+        <li><a class="nav-link" id="nav-prof-link" data-view="profile" data-i18n="nav_profile"
+            style="display:none;">Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn-theme" id="theme-toggle">
+        🌙
+      </button>
+      <button class="btn-lang" id="lang-switch-btn">
+        <span class="footer-icon">🌐</span>
+        <span id="lang-btn-text">العربية</span>
+      </button>
+      <button class="btn btn-secondary" id="nav-login-btn" data-i18n="nav_signin">Sign In</button>
+      <button class="btn btn-primary" id="nav-signup-btn" data-i18n="nav_signup">Sign Up</button>
+      <button class="btn btn-secondary" id="nav-profile-btn" data-view="profile" style="display:none;"
+        data-i18n="nav_profile">Profile</button>
+    </div>
+  </header>
+
+  <!-- ==================== HOME VIEW ==================== -->
+  <main class="view-panel active" id="view-home">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-quote-box">
+        <p class="hero-quote-text" data-i18n="hero_quote">We do not inherit the Earth from our ancestors; we borrow it
+          from our children.</p>
+        <p class="hero-quote-author" data-i18n="hero_quote_author">— Native American Proverb</p>
+      </div>
+      <h1 class="hero-title" data-i18n="hero_title">Turn Waste into Value</h1>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">AI-powered sustainability platform</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" id="hero-scan-btn" data-i18n="btn_scan">Scan It</button>
+        <button class="btn btn-secondary" id="hero-start-btn" data-i18n="btn_start">Start Now</button>
+      </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section class="section-container">
+      <div class="cards-grid">
+        <div class="glass-card">
+          <div class="card-icon">🔍</div>
+          <h3 class="card-title" data-i18n="feat_core_title">Core Features</h3>
+          <p class="card-desc" data-i18n="feat_core_desc">Identify waste types instantly using advanced image classifier
+            AI models.</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-icon">💡</div>
+          <h3 class="card-title" data-i18n="feat_learn_title">Learn Recycling</h3>
+          <p class="card-desc" data-i18n="feat_learn_desc">Discover creative DIY ideas to reuse items and save the
+            environment.</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-icon">⚡</div>
+          <h3 class="card-title" data-i18n="feat_tech_title">Modern Tech</h3>
+          <p class="card-desc" data-i18n="feat_tech_desc">Clean, lightning-fast platform designed for future green
+            communities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inspirational Section (Environmental Quotes) -->
+    <section class="section-container">
+      <div class="section-header">
+        <h2 data-i18n="quotes_title">Words of Wisdom</h2>
+      </div>
+      <div class="quotes-grid">
+        <!-- Quote 1 -->
+        <div class="glass-card quote-card">
+          <p class="quote-card-text" data-i18n="quote1_text">"No water, no life. No blue, no green."</p>
+          <div class="quote-card-footer">
+            <div class="quote-author-info">
+              <span class="quote-author-name" data-i18n="quote1_author">Dr. Sylvia Earle</span>
+              <span class="quote-author-source" data-i18n="quote1_source">Oceanographer, Mission Blue Founder</span>
+            </div>
+            <a href="https://missionblue.org/" target="_blank" class="quote-link" rel="noopener noreferrer">
+              <span data-i18n="visit_source">Visit Source</span> ↗
+            </a>
+          </div>
+        </div>
+        <!-- Quote 2 -->
+        <div class="glass-card quote-card">
+          <p class="quote-card-text" data-i18n="quote2_text">"It's the little things citizens do. That's what will make
+            the difference. My little thing is planting trees."</p>
+          <div class="quote-card-footer">
+            <div class="quote-author-info">
+              <span class="quote-author-name" data-i18n="quote2_author">Wangari Maathai</span>
+              <span class="quote-author-source" data-i18n="quote2_source">Nobel Peace Prize Laureate</span>
+            </div>
+            <a href="https://www.greenbeltmovement.org/" target="_blank" class="quote-link" rel="noopener noreferrer">
+              <span data-i18n="visit_source">Visit Source</span> ↗
+            </a>
+          </div>
+        </div>
+        <!-- Quote 3 -->
+        <div class="glass-card quote-card">
+          <p class="quote-card-text" data-i18n="quote3_text">"It is surely our responsibility to do everything within
+            our power to create a planet that is fit for the future."</p>
+          <div class="quote-card-footer">
+            <div class="quote-author-info">
+              <span class="quote-author-name" data-i18n="quote3_author">Sir David Attenborough</span>
+              <span class="quote-author-source" data-i18n="quote3_source">Naturalist and Broadcaster</span>
+            </div>
+            <a href="https://www.davidattenborough.com/" target="_blank" class="quote-link" rel="noopener noreferrer">
+              <span data-i18n="visit_source">Visit Source</span> ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <h2 data-i18n="values_title">Our Core Values</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="glass-card">
+          <div class="card-icon">🌱</div>
+          <h3 class="card-title" data-i18n="val_sustain_title">Sustainability</h3>
+          <p class="card-desc" data-i18n="val_sustain_desc">We promote long-term ecological balance by encouraging
+            active waste sorting and resources protection.</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-icon">⚙️</div>
+          <h3 class="card-title" data-i18n="val_innov_title">Innovation</h3>
+          <p class="card-desc" data-i18n="val_innov_desc">We utilize advanced AI classifiers and simulation algorithms
+            to make eco-decisions simple and smart.</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-icon">🤝</div>
+          <h3 class="card-title" data-i18n="val_comm_title">Community</h3>
+          <p class="card-desc" data-i18n="val_comm_desc">We bridge communication between local students and green
+            citizens to cultivate shared eco-responsibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="section-about">
+      <div class="about-content">
+        <span class="about-tag" data-i18n="nav_features">About Us</span>
+        <h2 class="hero-title" style="font-size:36px; margin-bottom:24px;" data-i18n="about_title">About Green Cycle
+        </h2>
+        <p class="about-desc-text" data-i18n="about_desc">Green Cycle is a newly launched, student-led digital
+          initiative created by passionate participants of the DEPI Scholarship. Our vision is to empower individuals to
+          make sustainable daily choices through accessible, cutting-edge technology. By leveraging lightweight AI
+          models, we aim to guide users in waste sorting, pollution severity evaluation, and environmental simulations,
+          establishing a strong foundation for green and smart communities of tomorrow.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== MARKETPLACE VIEW ==================== -->
+  <div class="view-panel" id="view-marketplace">
+    <section class="section-container" style="margin-top:20px;">
+      <div class="section-header" style="text-align:start; margin-bottom:24px;">
+        <h2 data-i18n="market_title">Green Marketplace</h2>
+        <p data-i18n="market_subtitle">Browse listed materials ready for recycling or trade</p>
+      </div>
+
+      <div class="marketplace-container">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar-filters">
+          <h3 data-i18n="filter_title">Filters</h3>
+
+          <div class="filter-group">
+            <span class="filter-group-title" data-i18n="filter_category">Category</span>
+            <label class="filter-option">
+              <input type="checkbox" name="market-cat" value="plastic" checked>
+              <span data-i18n="label_plastic">Plastic</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="market-cat" value="paper" checked>
+              <span data-i18n="label_paper">Paper</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="market-cat" value="metal" checked>
+              <span data-i18n="label_metal">Metal</span>
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-group-title" data-i18n="filter_location">Location</span>
+            <label class="filter-option">
+              <input type="radio" name="market-loc" value="all" checked>
+              <span data-i18n="label_all_towns">All Towns</span>
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="market-loc" value="cairo">
+              <span data-i18n="label_cairo">Cairo</span>
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="market-loc" value="alexandria">
+              <span data-i18n="label_alex">Alexandria</span>
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="market-loc" value="giza">
+              <span data-i18n="label_giza">Giza</span>
+            </label>
+          </div>
+        </aside>
+
+        <!-- Main Marketplace Contents -->
+        <section class="marketplace-main">
+          <!-- Newly Launched Info Banner -->
+          <div class="market-placeholder-banner">
+            <div class="market-placeholder-title">
+              <span>ℹ️</span>
+              <span data-i18n="market_placeholder_banner">Marketplace Initialized</span>
+            </div>
+            <p class="market-placeholder-desc" data-i18n="market_placeholder_text">This platform is newly launched. The
+              marketplace is fully set up and ready for future trading. No active transactions exist yet, but you can
+              explore listed materials or simulate selling your own waste below.</p>
+          </div>
+
+          <div class="market-header-actions">
+            <button class="btn btn-primary" id="btn-sell-waste-trigger">
+              <span>➕</span>
+              <span data-i18n="btn_sell_waste">Sell Your Waste</span>
+            </button>
+          </div>
+
+          <!-- Items Grid -->
+          <div class="waste-items-grid" id="market-items-grid">
+            <!-- Simulated Listing 1 -->
+            <div class="glass-card waste-card" data-cat="plastic" data-loc="cairo">
+              <div>
+                <span class="waste-badge badge-plastic" data-i18n="label_plastic">Plastic</span>
+                <div class="waste-img-placeholder">🧴 [Image Placeholder]</div>
+                <h4 class="card-title" style="font-size:16px;" data-i18n="item_plastic_title">PET Plastic Bottles</h4>
+                <p class="card-desc" style="font-size:12px; margin-top:4px;">120 kg • Cairo, Egypt</p>
+              </div>
+              <div>
+                <div class="waste-price">$0.60 <span
+                    style="font-size:12px; font-weight:normal; color:var(--text-secondary);" data-i18n="waste_unit">/
+                    kg</span></div>
+                <button class="btn btn-secondary btn-icon" style="width:100%;"
+                  onclick="alert('Seller details: greency8le@gmail.com')">
+                  <span data-i18n="waste_seller_info">Seller Info</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Simulated Listing 2 -->
+            <div class="glass-card waste-card" data-cat="paper" data-loc="alexandria">
+              <div>
+                <span class="waste-badge badge-paper" data-i18n="label_paper">Paper</span>
+                <div class="waste-img-placeholder">📦 [Image Placeholder]</div>
+                <h4 class="card-title" style="font-size:16px;" data-i18n="item_paper_title">Clean Cardboard Boxes</h4>
+                <p class="card-desc" style="font-size:12px; margin-top:4px;">350 kg • Alexandria, Egypt</p>
+              </div>
+              <div>
+                <div class="waste-price">$0.20 <span
+                    style="font-size:12px; font-weight:normal; color:var(--text-secondary);" data-i18n="waste_unit">/
+                    kg</span></div>
+                <button class="btn btn-secondary btn-icon" style="width:100%;"
+                  onclick="alert('Seller details: greency8le@gmail.com')">
+                  <span data-i18n="waste_seller_info">Seller Info</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Simulated Listing 3 -->
+            <div class="glass-card waste-card" data-cat="metal" data-loc="giza">
+              <div>
+                <span class="waste-badge badge-metal" data-i18n="label_metal">Metal</span>
+                <div class="waste-img-placeholder">🥫 [Image Placeholder]</div>
+                <h4 class="card-title" style="font-size:16px;" data-i18n="item_metal_title">Aluminum Beverage Cans</h4>
+                <p class="card-desc" style="font-size:12px; margin-top:4px;">80 kg • Giza, Egypt</p>
+              </div>
+              <div>
+                <div class="waste-price">$3.00 <span
+                    style="font-size:12px; font-weight:normal; color:var(--text-secondary);" data-i18n="waste_unit">/
+                    kg</span></div>
+                <button class="btn btn-secondary btn-icon" style="width:100%;"
+                  onclick="alert('Seller details: greency8le@gmail.com')">
+                  <span data-i18n="waste_seller_info">Seller Info</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== ECO AI PLATFORM VIEW ==================== -->
+  <div class="view-panel" id="view-ecoai">
+    <section class="ecoai-container">
+      <div class="section-header" style="margin-bottom:24px;">
+        <h2 data-i18n="ai_title">Eco AI Platform</h2>
+        <p data-i18n="ai_subtitle">Utilize AI modules to assist with sorting, analyzing pollution, and evaluating
+          environmental footprint.</p>
+      </div>
+
+      <!-- Tabs header navigation -->
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="tab-chat" data-i18n="tab_chat">Eco Chatbot</button>
+        <button class="tab-btn" data-tab="tab-pollution" data-i18n="tab_pollution">Pollution Analyzer</button>
+        <button class="tab-btn" data-tab="tab-recycling" data-i18n="tab_recycling">Recycling Assistant</button>
+        <button class="tab-btn" data-tab="tab-city" data-i18n="tab_city">City Simulator</button>
+      </div>
+
+      <!-- TAB 1: Chatbot -->
+      <div class="tab-content-panel active" id="tab-chat">
+        <div class="glass-card chat-window">
+          <div class="chat-history" id="chat-history-box">
+            <div class="chat-msg assistant">
+              <p data-i18n="chat_bot_greeting">Hello! I am Eco AI Advisor. Ask me anything about environmental
+                protection, waste sorting, or green living.</p>
+            </div>
+          </div>
+          <form class="chat-input-area" id="chat-form">
+            <input type="text" class="chat-input" id="chat-input-field"
+              placeholder="Type your environmental question..." data-i18n-placeholder="chat_placeholder" required>
+            <button class="btn btn-primary" type="submit" data-i18n="btn_send">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- TAB 2: Pollution Analyzer -->
+      <div class="tab-content-panel" id="tab-pollution">
+        <div class="analyzer-grid">
+          <div class="dropzone-container">
+            <h3 class="card-title" data-i18n="poll_panel_title">Pollution Analyzer</h3>
+            <p class="card-desc" style="margin-bottom:12px;" data-i18n="poll_panel_desc">Upload an image of an area to
+              evaluate pollution levels</p>
+
+            <div class="dropzone" id="poll-dropzone">
+              <span class="dropzone-icon" id="poll-dropzone-icon">📷</span>
+              <span class="card-desc" id="poll-dropzone-text" data-i18n="poll_dropzone">Drop pollution image here or
+                click to upload</span>
+              <img id="poll-preview" class="preview-img" style="display:none;" alt="Preview">
+              <input type="file" id="poll-file-input" accept="image/*" style="display:none;">
+            </div>
+            <button class="btn btn-primary" id="poll-btn-analyze" style="width:100%; margin-top:8px;" disabled
+              data-i18n="poll_btn_analyze">Analyze Pollution</button>
+          </div>
+
+          <div class="glass-card analysis-results-box" id="poll-results-card">
+            <!-- Spinner / Output Panel -->
+            <div class="loading-spinner-box" id="poll-spinner" style="display:none;">
+              <div class="spinner"></div>
+              <p class="card-desc" data-i18n="poll_waiting">Analyzing environmental pollution data...</p>
+            </div>
+
+            <div id="poll-output-content" class="markdown-result">
+              <!-- Result populated dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: Recycling Assistant -->
+      <div class="tab-content-panel" id="tab-recycling">
+        <div class="analyzer-grid">
+          <div class="dropzone-container">
+            <h3 class="card-title" data-i18n="recy_panel_title">Recycling Assistant</h3>
+            <p class="card-desc" style="margin-bottom:12px;" data-i18n="recy_panel_desc">Upload a photo of an item to
+              identify if and how it can be recycled</p>
+
+            <div class="dropzone" id="recy-dropzone">
+              <span class="dropzone-icon" id="recy-dropzone-icon">♻️</span>
+              <span class="card-desc" id="recy-dropzone-text" data-i18n="recy_dropzone">Drop waste image here or click
+                to upload</span>
+              <img id="recy-preview" class="preview-img" style="display:none;" alt="Preview">
+              <input type="file" id="recy-file-input" accept="image/*" style="display:none;">
+            </div>
+            <button class="btn btn-primary" id="recy-btn-analyze" style="width:100%; margin-top:8px;" disabled
+              data-i18n="recy_btn_analyze">Analyze Recyclability</button>
+          </div>
+
+          <div class="glass-card analysis-results-box" id="recy-results-card">
+            <div class="loading-spinner-box" id="recy-spinner" style="display:none;">
+              <div class="spinner"></div>
+              <p class="card-desc" data-i18n="recy_waiting">Identifying waste material classification...</p>
+            </div>
+
+            <div id="recy-output-content" class="markdown-result">
+              <!-- Result populated dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: City Simulator -->
+      <div class="tab-content-panel" id="tab-city">
+        <div class="simulator-layout">
+          <div class="glass-card sim-controls">
+            <h3 class="card-title" data-i18n="city_panel_title">City Environmental Simulator</h3>
+            <p class="card-desc" style="margin-bottom:16px;" data-i18n="city_panel_desc">Simulate urban environmental
+              impact based on key indicators</p>
+
+            <!-- Population -->
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-name" data-i18n="city_pop">Population</span>
+                <span class="slider-val" id="val-sim-pop">500,000</span>
+              </div>
+              <input type="range" class="sim-slider" id="input-sim-pop" min="10000" max="5000000" step="10000"
+                value="500000">
+            </div>
+
+            <!-- Cars -->
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-name" data-i18n="city_cars">Number of Cars</span>
+                <span class="slider-val" id="val-sim-cars">100,000</span>
+              </div>
+              <input type="range" class="sim-slider" id="input-sim-cars" min="1000" max="1000000" step="1000"
+                value="100000">
+            </div>
+
+            <!-- Factories -->
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-name" data-i18n="city_factories">Number of Factories</span>
+                <span class="slider-val" id="val-sim-factories">50</span>
+              </div>
+              <input type="range" class="sim-slider" id="input-sim-factories" min="0" max="500" step="1" value="50">
+            </div>
+
+            <!-- Trees -->
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-name" data-i18n="city_trees">Number of Trees</span>
+                <span class="slider-val" id="val-sim-trees">20,000</span>
+              </div>
+              <input type="range" class="sim-slider" id="input-sim-trees" min="100" max="500000" step="500"
+                value="20000">
+            </div>
+
+            <!-- Energy Usage -->
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-name" data-i18n="city_energy">Energy Usage (MWh/year)</span>
+                <span class="slider-val" id="val-sim-energy">1,200,000</span>
+              </div>
+              <input type="range" class="sim-slider" id="input-sim-energy" min="50000" max="10000000" step="50000"
+                value="1200000">
+            </div>
+
+            <button class="btn btn-primary" id="city-btn-simulate" style="width:100%; margin-top:12px;"
+              data-i18n="city_btn_simulate">Run Scientific Simulation</button>
+          </div>
+
+          <div class="glass-card analysis-results-box" id="city-results-card">
+            <div class="loading-spinner-box" id="city-spinner" style="display:none;">
+              <div class="spinner"></div>
+              <p class="card-desc" data-i18n="city_waiting">Computing mathematical environmental forecast model...</p>
+            </div>
+
+            <div id="city-output-content" class="markdown-result">
+              <!-- Result populated dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== DASHBOARD VIEW ==================== -->
+  <div class="view-panel" id="view-dashboard">
+    <section class="section-container">
+      <div class="section-header" style="text-align:start;">
+        <h2 data-i18n="dash_title">User Dashboard</h2>
+        <p data-i18n="dash_welcome">Welcome to Green Cycle Dashboard</p>
+      </div>
+
+      <!-- Dashboard Empty State -->
+      <div class="glass-card" style="margin-bottom:32px; border-inline-start: 4px solid var(--primary);">
+        <h3 class="card-title" data-i18n="dash_empty_header">Your Sustainability Journey Starts Here</h3>
+        <p class="card-desc" style="max-width:800px; margin-bottom:16px;" data-i18n="dash_empty_text">Since Green Cycle
+          is a newly launched initiative, your dashboard is currently in its initial clean state. Once you begin
+          scanning waste items, tracking material recyclability, and trading materials on our marketplace, your actual
+          data will appear here.</p>
+        <span class="about-tag" style="margin-bottom:0;" data-i18n="dash_action_prompt">Scan your first waste item to
+          unlock statistics!</span>
+      </div>
+
+      <!-- Placeholder Stats -->
+      <div class="dashboard-grid">
+        <div class="glass-card stat-card">
+          <span style="font-size:24px;">🍃</span>
+          <h4 class="card-title" style="font-size:14px; margin-top:8px; color:var(--text-secondary);"
+            data-i18n="dash_co2_saved">CO2 Saved</h4>
+          <p class="stat-card-val">0 <span
+              style="font-size:16px; font-weight:normal; color:var(--text-secondary);">kg</span></p>
+        </div>
+        <div class="glass-card stat-card">
+          <span style="font-size:24px;">📦</span>
+          <h4 class="card-title" style="font-size:14px; margin-top:8px; color:var(--text-secondary);"
+            data-i18n="dash_waste_recycled">Waste Recycled</h4>
+          <p class="stat-card-val">0 <span
+              style="font-size:16px; font-weight:normal; color:var(--text-secondary);">items</span></p>
+        </div>
+        <div class="glass-card stat-card">
+          <span style="font-size:24px;">⭐</span>
+          <h4 class="card-title" style="font-size:14px; margin-top:8px; color:var(--text-secondary);"
+            data-i18n="dash_eco_score">Eco-Score</h4>
+          <p class="stat-card-val">0<span style="font-size:18px;">%</span></p>
+        </div>
+      </div>
+
+      <!-- Progress Trackers / Badges Grid -->
+      <div class="dash-row">
+        <!-- Analytics Graphic Box -->
+        <div class="glass-card">
+          <h3 class="card-title" data-i18n="dash_keys_title">Sustainability Analytics</h3>
+          <p class="card-desc" style="margin-bottom:24px;" data-i18n="dash_keys_subtitle">Weekly environmental footprint
+            statistics (Will update upon scanning)</p>
+
+          <div
+            style="height:220px; display:flex; align-items:center; justify-content:center; border: 1px dashed var(--border-color); border-radius:12px;">
+            <p class="card-desc" style="text-align:center;">📉 <span data-i18n="dash_action_prompt">Scan your first
+                waste item to unlock statistics!</span></p>
+          </div>
+        </div>
+
+        <!-- Badges Card Box -->
+        <div class="glass-card">
+          <h3 class="card-title" data-i18n="dash_achieve_title">Achievements & Badges</h3>
+          <p class="card-desc" style="margin-bottom:20px;" data-i18n="dash_achieve_subtitle">Scan items and list waste
+            to unlock badges!</p>
+
+          <div class="badges-container">
+            <!-- Badge 1 -->
+            <div class="badge-item">
+              <span class="badge-icon">🌱</span>
+              <div class="badge-text">
+                <span class="badge-name" data-i18n="dash_badge_newbie">Eco Newbie</span>
+                <span class="badge-status locked" data-i18n="dash_locked">Locked</span>
+              </div>
+            </div>
+            <!-- Badge 2 -->
+            <div class="badge-item">
+              <span class="badge-icon">♻️</span>
+              <div class="badge-text">
+                <span class="badge-name" data-i18n="dash_badge_master">Recycle Master</span>
+                <span class="badge-status locked" data-i18n="dash_locked">Locked</span>
+              </div>
+            </div>
+            <!-- Badge 3 -->
+            <div class="badge-item">
+              <span class="badge-icon">🏆</span>
+              <div class="badge-text">
+                <span class="badge-name" data-i18n="dash_badge_champion">Green Champion</span>
+                <span class="badge-status locked" data-i18n="dash_locked">Locked</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== PROFILE VIEW ==================== -->
+  <div class="view-panel" id="view-profile">
+    <section class="form-view">
+      <div class="section-header" style="text-align:start; margin-bottom:24px;">
+        <h2 data-i18n="prof_title">Account Profile Settings</h2>
+        <p data-i18n="prof_subtitle">Manage your personal credentials, language options, and account alerts</p>
+      </div>
+
+      <form class="glass-card" id="profile-edit-form" style="display:flex; flex-direction:column; gap:8px;">
+        <!-- Name -->
+        <div class="form-group">
+          <label class="form-label" for="profile-name" data-i18n="prof_lbl_name">Display Name</label>
+          <input type="text" class="form-input" id="profile-name" required value="Green Explorer">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label class="form-label" for="profile-email" data-i18n="prof_lbl_email">Email Address</label>
+          <input type="email" class="form-input" id="profile-email" required value="explorer@greencycle.org">
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label class="form-label" for="profile-pass" data-i18n="prof_lbl_pass">New Password</label>
+          <input type="password" class="form-input" id="profile-pass" placeholder="••••••••">
+        </div>
+
+        <!-- Language Prefered -->
+        <div class="form-group">
+          <label class="form-label" for="profile-lang" data-i18n="prof_lbl_lang">Default Language</label>
+          <select class="form-input" id="profile-lang" style="background:#0f172a;">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
+        </div>
+
+        <!-- Notifications -->
+        <div class="form-group form-checkbox">
+          <input type="checkbox" id="profile-notifs" checked>
+          <label class="form-label" for="profile-notifs" style="margin-bottom:0;" data-i18n="prof_lbl_notif">Enable
+            Email Notifications</label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit" data-i18n="prof_save_btn">Save Preferences</button>
+          <button class="btn btn-danger" type="button" id="profile-logout-btn" data-i18n="prof_logout_btn">Sign
+            Out</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a class="footer-logo">
+          <!-- GreenCycle Logo SVG inside footer -->
+          <img src="images/logoo.png" alt="GreenCycle Logo" class="logo-svg">
+          <span class="brand-name" style="font-size:20px;">GreenCycle</span>
+        </a>
+        <p class="footer-mission-text" data-i18n="footer_mission">Empowering communities to recycle smarter, track
+          ecological impact, and build a sustainable future.</p>
+      </div>
+
+      <div class="footer-contact">
+        <h4 class="footer-contact-title" data-i18n="footer_contact_title">Get In Touch</h4>
+        <div class="footer-contact-links">
+          <!-- Raw URL hidden, structured properly -->
+          <a href="mailto:greency8le@gmail.com" class="footer-contact-item">
+            <span class="footer-icon">📧</span>
+            <span>greency8le@gmail.com</span>
+          </a>
+          <!-- Instagram icon + Username -->
+          <a href="https://instagram.com/greency8le" target="_blank" rel="noopener noreferrer"
+            class="footer-contact-item">
+            <!-- Instagram Styled SVG icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="footer-icon" style="color:var(--text-secondary);">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>@greency8le</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL: AUTHENTICATION ==================== -->
+  <div class="modal-overlay" id="auth-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="auth-modal-close">×</button>
+
+      <!-- Login Mode -->
+      <div id="auth-login-mode">
+        <h3 class="modal-title" data-i18n="auth_login_title">Sign In to Green Cycle</h3>
+        <form id="auth-login-form">
+          <div class="form-group">
+            <label class="form-label" for="login-email" data-i18n="auth_email">Email Address</label>
+            <input type="email" class="form-input" id="login-email" required placeholder="name@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="login-pass" data-i18n="auth_pass">Password</label>
+            <input type="password" class="form-input" id="login-pass" required placeholder="••••••••">
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:100%; margin-top:8px;"
+            data-i18n="auth_btn_login">Login</button>
+        </form>
+        <p class="modal-toggle-prompt">
+          <span data-i18n="auth_no_account">Don't have an account?</span>
+          <a href="#" id="go-to-signup" data-i18n="nav_signup">Sign Up</a>
+        </p>
+      </div>
+
+      <!-- Sign Up Mode -->
+      <div id="auth-signup-mode" style="display:none;">
+        <h3 class="modal-title" data-i18n="auth_signup_title">Create Free Account</h3>
+        <form id="auth-signup-form">
+          <div class="form-group">
+            <label class="form-label" for="signup-name" data-i18n="auth_name">Full Name</label>
+            <input type="text" class="form-input" id="signup-name" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-email" data-i18n="auth_email">Email Address</label>
+            <input type="email" class="form-input" id="signup-email" required placeholder="name@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-pass" data-i18n="auth_pass">Password</label>
+            <input type="password" class="form-input" id="signup-pass" required placeholder="Min 6 characters">
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:100%; margin-top:8px;"
+            data-i18n="auth_btn_signup">Create Account</button>
+        </form>
+        <p class="modal-toggle-prompt">
+          <span data-i18n="auth_has_account">Already have an account?</span>
+          <a href="#" id="go-to-login" data-i18n="nav_signin">Login</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: SELL WASTE ==================== -->
+  <div class="modal-overlay" id="sell-waste-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="sell-modal-close">×</button>
+      <h3 class="modal-title" data-i18n="modal_sell_title">Sell Your Waste</h3>
+
+      <form id="sell-waste-form">
+        <div class="form-group">
+          <label class="form-label" for="sell-name" data-i18n="modal_name">Full Name</label>
+          <input type="text" class="form-input" id="sell-name" required value="Green Explorer">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="sell-email" data-i18n="modal_email">Email Address</label>
+          <input type="email" class="form-input" id="sell-email" required value="explorer@greencycle.org">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="sell-type" data-i18n="modal_waste_type">Waste Type</label>
+          <select class="form-input" id="sell-type" style="background:#0f172a;">
+            <option value="plastic" data-i18n="label_plastic">Plastic</option>
+            <option value="paper" data-i18n="label_paper">Paper</option>
+            <option value="metal" data-i18n="label_metal">Metal</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="sell-weight" data-i18n="modal_weight">Weight (kg)</label>
+          <input type="number" class="form-input" id="sell-weight" required min="1" max="10000" value="10">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="sell-location" data-i18n="modal_location">Location</label>
+          <select class="form-input" id="sell-location" style="background:#0f172a;">
+            <option value="cairo" data-i18n="label_cairo">Cairo</option>
+            <option value="alexandria" data-i18n="label_alex">Alexandria</option>
+            <option value="giza" data-i18n="label_giza">Giza</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit" style="width:100%; margin-top:8px;"
+          data-i18n="btn_submit_listing">Submit Listing</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Wrapper -->
+  <div class="toast-msg" id="toast-notification">
+    <span id="toast-icon">ℹ️</span>
+    <span id="toast-text">Toast message text here...</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="translations.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
