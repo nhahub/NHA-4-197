@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-paper: #F2F4EC;
+  --canopy: #152018;
+  --ink: #1B2A1E;
+  --moss: #3E5C3A;
+  --fern: #5C7A52;
+  --amber: #C97A2B;
+  --clay: #B14A34;
+  --line: #D8D3C4;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-paper);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.readout {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
