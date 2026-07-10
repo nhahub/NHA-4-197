@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_API_URL=http://localhost:8000
+    container_name: greencycle-app
+    ports:
+      - "3000:3000" # Expose Frontend
+      - "8000:8000" # Expose Backend
+    env_file:
+      - ./GreenCycle/backend/.env
+    restart: always

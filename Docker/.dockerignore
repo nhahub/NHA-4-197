@@ -1,0 +1,14 @@
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.git
+.gitignore
+.env
+.ipynb_checkpoints
+models/
+data/
+cleaned data/
+GreenCycle/frontend/node_modules
+GreenCycle/frontend/.next
